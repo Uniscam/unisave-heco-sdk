@@ -6,7 +6,7 @@ export {
   ChainId,
   TradeType,
   Rounding,
-  FACTORY_ADDRESS,
+  FACTORY_ADDRESSES,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY
 } from './constants'

@@ -7,7 +7,7 @@ import { getCreate2Address } from '@ethersproject/address'
 
 import {
   BigintIsh,
-  FACTORY_ADDRESS,
+  FACTORY_ADDRESSES,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   ZERO,
@@ -21,7 +21,7 @@ import { sqrt, parseBigintIsh } from '../utils'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 import { Token } from './token'
 
-let PAIR_ADDRESS_CACHE: { [token0Address: string]: { [token1Address: string]: string } } = {}
+let PAIR_ADDRESS_CACHE: { [chainId: number]: { [token0Address: string]: { [token1Address: string]: string } } } = {}
 
 export class Pair {
   public readonly liquidityToken: Token
@@ -29,14 +29,20 @@ export class Pair {
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
     const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
+    const chainId = tokenA.chainId
 
-    if (PAIR_ADDRESS_CACHE?.[tokens[0].address]?.[tokens[1].address] === undefined) {
-      PAIR_ADDRESS_CACHE = {
-        ...PAIR_ADDRESS_CACHE,
+    let pairAddresses = PAIR_ADDRESS_CACHE[chainId]
+    if (!pairAddresses) {
+      pairAddresses = PAIR_ADDRESS_CACHE[chainId] = {}
+    }
+
+    if (pairAddresses[tokens[0].address]?.[tokens[1].address] === undefined) {
+      PAIR_ADDRESS_CACHE[chainId] = pairAddresses = {
+        ...pairAddresses,
         [tokens[0].address]: {
-          ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
+          ...pairAddresses?.[tokens[0].address],
           [tokens[1].address]: getCreate2Address(
-            FACTORY_ADDRESS,
+            FACTORY_ADDRESSES[chainId] ?? FACTORY_ADDRESSES[ChainId.BSC_MAINNET],
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
             INIT_CODE_HASH
           )
@@ -44,7 +50,7 @@ export class Pair {
       }
     }
 
-    return PAIR_ADDRESS_CACHE[tokens[0].address][tokens[1].address]
+    return pairAddresses[tokens[0].address][tokens[1].address]
   }
 
   public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount) {

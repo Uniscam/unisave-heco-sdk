@@ -9,6 +9,7 @@ export enum ChainId {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
+  BSC_MAINNET = 56,
   BSC_TESTNET = 97
 }
 
@@ -23,7 +24,15 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x1243f6c819265d58d7c9424d50df42d047832fb3'
+export const FACTORY_ADDRESSES = {
+  [ChainId.MAINNET]: null,
+  [ChainId.ROPSTEN]: null,
+  [ChainId.RINKEBY]: null,
+  [ChainId.GÖRLI]: null,
+  [ChainId.KOVAN]: null,
+  [ChainId.BSC_MAINNET]: '0x8d28dbe26a933a16e28bad7cf92ace8f8f0d2f0d',
+  [ChainId.BSC_TESTNET]: '0x1243f6c819265d58d7c9424d50df42d047832fb3',
+}
 
 export const INIT_CODE_HASH = '0x2a3a85fb30897d7bfc195883e916f3113282343af7b6e1c62738c596ab9aa744'
 
