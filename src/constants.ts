@@ -30,11 +30,11 @@ export const FACTORY_ADDRESSES = {
   [ChainId.RINKEBY]: null,
   [ChainId.GÖRLI]: null,
   [ChainId.KOVAN]: null,
-  [ChainId.BSC_MAINNET]: '0x8d28dbe26a933a16e28bad7cf92ace8f8f0d2f0d',
-  [ChainId.BSC_TESTNET]: '0x1243f6c819265d58d7c9424d50df42d047832fb3',
+  [ChainId.BSC_MAINNET]: '0xace5b5cd1d3a77c746091525786bd6cb83d6c4c9',
+  [ChainId.BSC_TESTNET]: '0x83ae94E3a38ae1E763542AEE8219DdAD98473a45',
 }
 
-export const INIT_CODE_HASH = '0x2a3a85fb30897d7bfc195883e916f3113282343af7b6e1c62738c596ab9aa744'
+export const INIT_CODE_HASH = '0x25f272bf03d05a83ede8bff2a1b6f35e5c17068fdb873c5526011f81e60f5c75'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

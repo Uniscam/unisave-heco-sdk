@@ -17,7 +17,7 @@ describe('Pair', () => {
       const T_USDT = new Token(ChainId.BSC_TESTNET, '0x337610d27c682e347c9cd60bd4b3b107c9d34ddd', 6, 'USDT', 'Tether USD')
       const T_DAI = new Token(ChainId.BSC_TESTNET, '0xec5dcb5dbf4b114c9d0f65bccab49ec54f6a0867', 18, 'DAI', 'Dai Token')
 
-      expect(Pair.getAddress(T_USDT, T_DAI)).toEqual('0xD8f31F9d454Ff96e9B1276E73CABf659785a99A4')
+      expect(Pair.getAddress(T_USDT, T_DAI)).toEqual('0xF0209349580538BE96305af3D82d88169714cA22')
     })
   })
 
