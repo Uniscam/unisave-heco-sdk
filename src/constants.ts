@@ -24,17 +24,9 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESSES = {
-  [ChainId.MAINNET]: null,
-  [ChainId.ROPSTEN]: null,
-  [ChainId.RINKEBY]: null,
-  [ChainId.GÖRLI]: null,
-  [ChainId.KOVAN]: null,
-  [ChainId.BSC_MAINNET]: '0x1575FAeFa969b95ABa5c867363799EB3475BcF55',
-  [ChainId.BSC_TESTNET]: '0x3Daef39F9CB4934492721e8974147d34B52A75b4',
-}
+export const FACTORY_ADDRESS = '0x2ce81910a61a15b1360c57267319a3f474521d2a'
 
-export const INIT_CODE_HASH = '0x38f57775cf716f060dddf754142982019a17cff4b57de94a6e3ecd6bd405225d'
+export const INIT_CODE_HASH = '0x1f998461cb34441262aff45ddf3f38e3286971612779d29e1fb65b813bbe5f82'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
