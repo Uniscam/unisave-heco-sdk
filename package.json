@@ -1,14 +1,14 @@
 {
-  "name": "@haneko/uniswap-sdk",
+  "name": "@nekomeowww/uniscam-sdk",
   "license": "MIT",
-  "version": "3.0.8",
+  "version": "3.0.12",
   "description": "🛠 An SDK for building applications on top of Uniswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/KodamaSakuno/uniswap-sdk.git",
+  "repository": "https://github.com/nekomeowww/uniscam-sdk.git",
   "keywords": [
     "uniswap",
     "ethereum"
