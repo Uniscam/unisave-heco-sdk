@@ -9,6 +9,7 @@ import {
   BigintIsh,
   FACTORY_ADDRESS,
   INIT_CODE_HASH,
+  INIT_CODE_HASH_MAINNET,
   MINIMUM_LIQUIDITY,
   ZERO,
   ONE,
@@ -38,7 +39,7 @@ export class Pair {
           [tokens[1].address]: getCreate2Address(
             FACTORY_ADDRESS,
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
-            INIT_CODE_HASH
+            tokenA.chainId === 97 ? INIT_CODE_HASH : INIT_CODE_HASH_MAINNET
           )
         }
       }
