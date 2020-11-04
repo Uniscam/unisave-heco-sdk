@@ -83,3 +83,6 @@ export const WETH = {
   [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB')
 }
+
+export const USDT = "0x55d398326f99059fF775485246999027B3197955";
+export const BUSD = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
