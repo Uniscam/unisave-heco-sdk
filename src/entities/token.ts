@@ -84,5 +84,21 @@ export const WETH = {
   [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB')
 }
 
-export const USDT = "0x55d398326f99059fF775485246999027B3197955";
-export const BUSD = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
+export const USDT = {
+  [ChainId.MAINNET]: "",
+  [ChainId.ROPSTEN]: "",
+  [ChainId.RINKEBY]: "",
+  [ChainId.GÖRLI]: "",
+  [ChainId.KOVAN]: "",
+  [ChainId.BSC_MAINNET]: "0x55d398326f99059fF775485246999027B3197955",
+  [ChainId.BSC_TESTNET]: "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd"
+}
+export const BUSD = {
+  [ChainId.MAINNET]: "",
+  [ChainId.ROPSTEN]: "",
+  [ChainId.RINKEBY]: "",
+  [ChainId.GÖRLI]: "",
+  [ChainId.KOVAN]: "",
+  [ChainId.BSC_MAINNET]: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+  [ChainId.BSC_TESTNET]: "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee"
+}

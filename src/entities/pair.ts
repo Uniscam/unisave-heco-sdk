@@ -126,9 +126,9 @@ export class Pair {
       throw new InsufficientReservesError()
     }
 
-    if (this.token0.address === USDT && this.token1.address === BUSD)
+    if (this.token0.address === USDT[this.chainId] && this.token1.address === BUSD[this.chainId])
       fee = 0;
-    else if (this.token0.address === BUSD && this.token1.address === USDT)
+    else if (this.token0.address === BUSD[this.chainId] && this.token1.address === USDT[this.chainId])
       fee = 0;
 
     const inputReserve = this.reserveOf(inputAmount.token)
