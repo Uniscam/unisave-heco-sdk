@@ -157,7 +157,7 @@ export class Trade {
 
     let fee = 997;
     if ((route.input.symbol === 'BUSD' && route.output.symbol === 'USDT') || (route.input.symbol === 'USDT' && route.output.symbol === 'BUSD'))
-      fee = 0;
+      fee = 1000;
 
     if (tradeType === TradeType.EXACT_INPUT) {
       invariant(currencyEquals(amount.currency, route.input), 'INPUT')
