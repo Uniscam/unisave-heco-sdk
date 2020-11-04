@@ -156,7 +156,7 @@ export class Trade {
     const nextPairs: Pair[] = new Array(route.pairs.length)
 
     let fee = 997;
-    if ((route.input.name === 'BUSD' && route.output.name === 'USDT') || (route.input.name === 'USDT' && route.output.name === 'BUSD'))
+    if ((route.input.symbol === 'BUSD' && route.output.symbol === 'USDT') || (route.input.symbol === 'USDT' && route.output.symbol === 'BUSD'))
       fee = 0;
 
     if (tradeType === TradeType.EXACT_INPUT) {
