@@ -13,8 +13,10 @@ export class Currency {
   public readonly symbol?: string
   public readonly name?: string
 
+  /**
+   * The only instance of the base class `Currency`.
+   */
   public static readonly ETHER: Currency = new Currency(18, 'BNB', 'BNB')
-  public static readonly BINANCE_COIN: Currency = new Currency(18, 'BNB', 'BNB')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -29,12 +31,7 @@ export class Currency {
     this.symbol = symbol
     this.name = name
   }
-
-  isMainCurrency() {
-    return this === Currency.ETHER || this === Currency.BINANCE_COIN
-  }
 }
 
 const ETHER = Currency.ETHER
-const BINANCE_COIN = Currency.BINANCE_COIN
-export { ETHER, BINANCE_COIN }
+export { ETHER }
