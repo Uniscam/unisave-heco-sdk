@@ -13,7 +13,7 @@ export class Currency {
   public readonly symbol?: string
   public readonly name?: string
 
-  public static readonly ETHER: Currency = new Currency(18, 'ETH', 'ETH')
+  public static readonly ETHER: Currency = new Currency(18, 'BNB', 'BNB')
   public static readonly BINANCE_COIN: Currency = new Currency(18, 'BNB', 'BNB')
 
   /**
