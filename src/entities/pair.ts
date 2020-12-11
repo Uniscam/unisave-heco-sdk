@@ -13,7 +13,6 @@ import {
   ZERO,
   ONE,
   FIVE,
-  _997,
   _1000,
   ChainId
 } from '../constants'

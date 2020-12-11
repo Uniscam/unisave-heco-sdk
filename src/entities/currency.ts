@@ -10,7 +10,7 @@ const CurrencyName = {
   [ChainId.GÖRLI]: 'ETH',
   [ChainId.KOVAN]: 'ETH',
   [ChainId.BSC_MAINNET]: 'BNB',
-  [ChainId.BSC_TESTNET]: 'BNB',
+  [ChainId.BSC_TESTNET]: 'BNB'
 }
 
 /**
@@ -43,7 +43,7 @@ export class Currency {
   }
 
   toDisplayableSymbol(chainId: ChainId) {
-    if (this !== ETHER) throw new Error("Not currency instance")
+    if (this !== ETHER) throw new Error('Not currency instance')
     return CurrencyName[chainId]
   }
 }

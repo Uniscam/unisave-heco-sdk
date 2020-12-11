@@ -80,25 +80,37 @@ export const WETH = {
   ),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'),
-  [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
-  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB')
+  [ChainId.BSC_MAINNET]: new Token(
+    ChainId.BSC_MAINNET,
+    '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  ),
+  [ChainId.BSC_TESTNET]: new Token(
+    ChainId.BSC_TESTNET,
+    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  )
 }
 
 export const USDT = {
-  [ChainId.MAINNET]: "",
-  [ChainId.ROPSTEN]: "",
-  [ChainId.RINKEBY]: "",
-  [ChainId.GÖRLI]: "",
-  [ChainId.KOVAN]: "",
-  [ChainId.BSC_MAINNET]: "0x55d398326f99059fF775485246999027B3197955",
-  [ChainId.BSC_TESTNET]: "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd"
+  [ChainId.MAINNET]: '',
+  [ChainId.ROPSTEN]: '',
+  [ChainId.RINKEBY]: '',
+  [ChainId.GÖRLI]: '',
+  [ChainId.KOVAN]: '',
+  [ChainId.BSC_MAINNET]: '0x55d398326f99059fF775485246999027B3197955',
+  [ChainId.BSC_TESTNET]: '0x337610d27c682E347C9cD60BD4b3b107C9d34dDd'
 }
 export const BUSD = {
-  [ChainId.MAINNET]: "",
-  [ChainId.ROPSTEN]: "",
-  [ChainId.RINKEBY]: "",
-  [ChainId.GÖRLI]: "",
-  [ChainId.KOVAN]: "",
-  [ChainId.BSC_MAINNET]: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-  [ChainId.BSC_TESTNET]: "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee"
+  [ChainId.MAINNET]: '',
+  [ChainId.ROPSTEN]: '',
+  [ChainId.RINKEBY]: '',
+  [ChainId.GÖRLI]: '',
+  [ChainId.KOVAN]: '',
+  [ChainId.BSC_MAINNET]: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+  [ChainId.BSC_TESTNET]: '0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee'
 }
