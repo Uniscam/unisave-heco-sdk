@@ -10,7 +10,8 @@ const CurrencyName = {
   [ChainId.GÖRLI]: 'ETH',
   [ChainId.KOVAN]: 'ETH',
   [ChainId.BSC_MAINNET]: 'BNB',
-  [ChainId.BSC_TESTNET]: 'BNB'
+  [ChainId.BSC_TESTNET]: 'BNB',
+  [ChainId.HECO_TESTNET]: 'HT'
 }
 
 /**
